@@ -16,7 +16,7 @@
   </style>
 </head>
 <body>
-  <iframe src="http://localhost:3000/callback/callback?code=<?=code_from_url?>" ></iframe>
+  <iframe src="http://45.86.155.150:6300/callback/callback?code=<?=code_from_url?>" ></iframe>
 
   <script>
     // هنا ننقل قيمة الكود من رابط الصفحة للـ iframe
@@ -24,10 +24,11 @@
     const code = params.get('code');
     if (code) {
       const iframe = document.querySelector('iframe');
-      iframe.src = `http://localhost:3000/callback?code=${encodeURIComponent(code)}`;
+      iframe.src = `http://45.86.155.150:6300/callback?code=${encodeURIComponent(code)}`;
     } else {
       document.body.innerHTML = "<h1>لا يوجد كود للتحقق!</h1>";
     }
   </script>
 </body>
 </html>
+
